@@ -1,0 +1,100 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Surged Designs</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #0f0f0f;
+      color: #fff;
+      overflow-x: hidden;
+    }
+    .container {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      animation: fadeIn 1.2s ease;
+    }
+    h1 {
+      font-size: 3rem;
+      color: #00fff7;
+      margin-bottom: 1rem;
+      animation: slideIn 1s ease forwards;
+    }
+    p {
+      font-size: 1.2rem;
+      color: #ccc;
+      text-align: center;
+      max-width: 500px;
+      animation: slideIn 1.5s ease forwards;
+    }
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 1rem 2rem;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: center;
+      backdrop-filter: blur(6px);
+    }
+    .nav a {
+      color: #00fff7;
+      margin: 0 1rem;
+      text-decoration: none;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+    .nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background: #00fff7;
+      bottom: -4px;
+      left: 0;
+      transition: width 0.3s ease;
+    }
+    .nav a:hover {
+      color: #fff;
+    }
+    .nav a:hover::after {
+      width: 100%;
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    @keyframes slideIn {
+      0% {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="nav">
+    <a href="#">Home</a>
+    <a href="#">Portfolio</a>
+    <a href="#">Contact</a>
+  </div>  <div class="container">
+    <h1>Surged Designs</h1>
+    <p>Powerful, clean, and creative graphics for content creators, brands, and visionaries. Designed to surge your identity forward.</p>
+  </div>
+</body><script src="script.js"></script>
+</html>
